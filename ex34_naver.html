@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex34_naver</title>
+</head>
+
+<style>
+
+    #movie {
+        border : 0px solid black;
+        width: 900px;
+        height: 363px;
+    }
+
+    #movie .big {
+        border: 0px solid black;
+        width: 364px;
+        height: 363px;
+        float : left;
+        
+        margin-right: 15px;
+    }
+
+    #movie .big img {
+        width: 364px;
+        height: 180px;
+    }
+
+    #movie .big .cate {
+        font-size: 12px;
+        font-weight: 700;
+        color: #1a2f63;
+
+        margin-top: 9px;
+    }
+
+    #movie .big .title {
+        font-size: 13px;
+        font-weight: bold;
+        color: inherit;
+
+        margin-top: 6px;
+    }
+
+    #movie .big .desc {
+        width: 346px;
+        font-size: 13px;
+        color: #404040;
+
+        line-height: 21px;
+        margin-top : 6px;
+    }
+
+    #movie .big .company{
+        font-size: 12px;
+        color: #505050;
+        
+        margin-top: 6px;
+    }
+
+
+    #movie .small {
+        border: 0px solid black;
+        height: 363px;
+    }
+
+    #movie .small .sub {
+        float : left;
+        margin-bottom: 10px;
+    }
+
+    #movie .small .sub img {
+        width: 98px;
+        height: 98px;
+        float : left;
+        
+        margin-right: 15px;
+    }
+
+    #movie .small .sub .desc{
+        float : left;
+    }
+
+    #movie .small .sub .desc .cate {
+        font-size: 12px;
+        font-weight: 700;
+        color: #1a2f63;
+
+        margin-top: 8px;
+    }
+
+    #movie .small .sub .desc .title {
+        width: 218px;;
+        font-size: 13px;
+        font-weight: bold;
+        color: inherit;
+
+        margin-top: 6px;
+    }
+
+    #movie .small .sub .desc .company {
+        font-size: 12px;
+        color: #505050;
+        
+        margin-top: 6px;
+    }
+
+    
+
+</style>
+
+<body>
+    <!-- 
+        ex34_naver.html 
+    -->
+
+    <div id="movie">
+
+        <div class="big">
+            <img src="images/b01.jpeg">
+            <div class="cate">영화人</div>
+            <div class="title">데뷔 1년 만에 주연! 모두를 사로잡은 1994년생 배우</div>
+            <div class="desc">넷플릭스에서 공개된 상큼 발랄한 로맨스 <새콤달콤>은 이제 막 사회에 발을 내디딘 청춘 남녀의 각가지 맛 사랑을...</div>
+            <div class="company">씨네플레이</div>
+        </div>
+        
+                
+        <div class="small">
+            <div class="sub">
+                <img src="images/b02.jpeg">
+                <div class="desc">
+                    <div class="cate">영화이야기</div>
+                    <div class="title">아시아 대표 영화강국이던 일본, 쇠퇴의 원인은 무엇인가</div>
+                    <div class="company">씨네플레이</div>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            <div class="sub">
+                <img src="images/b03.jpeg">
+                <div class="desc">
+                    <div class="cate">히어로 월드</div>
+                    <div class="title">당할수록 작품이 사는 남자, '로키'의 귀환</div>
+                    <div class="company">씨네플레이</div>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+
+            <div class="sub">
+                <img src="images/b04.jpeg">
+                <div class="desc">
+                    <div class="cate">영화 비평</div>
+                    <div class="title">장르적 요소를 적극적으로 차용한 지아장커의 '강호아녀'</div>
+                    <div class="company">씨네플레이</div>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+</html>

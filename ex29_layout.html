@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ex29_layout</title>
+</head>
+
+<style>
+    /* 1번 */
+    #header1 {
+        background-color: red;
+        width: 200px;
+        height: 500px;
+        float : left;
+    }
+
+    #section1 {
+        background-color: yellow;
+        width: 400px;
+        height: 500px;
+        float: left;
+    }
+
+    /* 2번 */
+    #header2 {
+        background-color: red;
+        width: 600px;
+        height: 100px;
+    }
+
+    #section2-1 {
+        background-color: yellow;
+        width: 200px;
+        height: 400px;
+        float: left;
+    }
+
+    #section2-2 {
+        background-color: greenyellow;
+        width: 200px;
+        height: 400px;
+        float: left;
+    }
+
+    #section2-3 {
+        background-color: pink;
+        width: 200px;
+        height: 400px;
+        float: left;
+    }
+
+    /* 3번 */
+    #header3 {
+        background-color: red;
+        width: 600px;
+        height: 100px;
+    }
+
+    #nav3 {
+        background-color: skyblue;
+        width: 200px;
+        height: 400px;
+        float : left;
+    }
+
+    #section3 #section3-1 {
+        background-color: yellow;
+        width: 400px;
+        height: 300px;
+        float: left;
+    }
+
+    #section3 #footer3 {
+        background-color: green;
+        width: 400px;
+        height: 100px;
+        float: left;
+    }
+
+    /* 3번 추가 방법 */
+    /*
+    #section3 {
+        width: 400px;
+        height: 400px;
+        float: left;
+    }
+
+    #section3-1 {
+        background-color: yellow;
+        width: 400px;
+        height: 300px;
+    }
+
+    #footer3 {
+        background-color: green;
+        width: 400px;
+        height: 100px;
+    } */
+
+</style>
+
+<body>
+    <!-- 
+        ex29_layout.html
+     -->
+
+     <h1>1번</h1>
+     <main>
+        <header id="header1"></header>
+        <section id="section1"></section>
+    </main>
+    <div style="clear: both;"></div>
+
+
+     <h1>2번</h1>
+     <main>
+        <header id="header2"></header>
+        <section id="section2-1"></section>
+        <section id="section2-2"></section>
+        <section id="section2-3"></section>
+    </main>
+    <div style="clear: both;"></div>
+
+
+     <h1>3번</h1>
+     <main>
+        <header id="header3"></header>
+        <nav id="nav3"></nav>
+        <section id="section3">
+            <section id="section3-1"></section>
+            <footer id="footer3"></footer>
+        </section>
+    </main>
+    <div style="clear: both;"></div>
+
+</body>
+</html>

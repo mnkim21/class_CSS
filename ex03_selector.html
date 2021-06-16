@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex03_selector</title>
+
+    <style>
+        /* 선택자{속성명:값;} */
+
+        h1{color : maroon;}
+        div{color : greenyellow;}
+        input{color : palevioletred;}
+
+        p{color : darkviolet}
+
+    </style>
+
+</head>
+<body>
+    <!-- 
+        ex03_selector.html
+
+        CSS 구문(문법)
+        - 선택자 {속성명 : 값;}
+        - 선택자 {속성명 : 값; 속성명 : 값; 속성명 : 값;}
+        ex. h1{color : blue;} => h1이라는 태그를 찾아서 색상을 blue로 바꿔라
+
+        Selector, 선택자 ★★★★★★★★★★
+        - HTML소스에서 특정 태그(*****)를 검색하는 도구
+        - 왜? 태그를 찾아서 서식을 적용하려고
+            - a와 b는 속성에 따라 다르다.
+            a. 태그 자체의 서식 적용
+            b. 태그의 내용물에 서식 적용
+
+        CSS 선택자
+        1. 태그 선택자
+            - 태그명을 사용해서 원하는 태그를 검색한다.
+            - 장점 : 검색된 태그가 1개 이상일 경우 모두 적용된다.(일괄적용 -> 생산성)
+            - 단점 : 태그명으로만 검색하기 땜누에 원치않는 동일한 태그를 걸러낼 방법이 없다.
+
+
+     -->
+
+     <h1>h1임</h1>
+     <p>p임</p>
+     <div>div임</div>
+     <blockquote>blockquote임</blockquote>
+     <input type="text" value="홍길동">
+     <h1>h1임</h1>
+     <p>p임</p>
+     <div>div임</div>
+     <blockquote>blockquote임</blockquote>
+     <input type="text" value="홍길동">
+     <h1>h1임</h1>
+     <p>p임</p>
+     <div>div임</div>
+     <blockquote>blockquote임</blockquote>
+     <input type="text" value="홍길동">
+
+     <hr>
+
+     <h2>회사 소개</h2>
+     <p>회사 소개 어쩌구구 저쩌구구 이러쿵쿵 저러쿵쿵 회사 소개 어쩌구구 저쩌구구 이러쿵쿵 저러쿵쿵 회사 소개 어쩌구구 저쩌구구 이러쿵쿵 저러쿵쿵 회사 소개 어쩌구구 저쩌구구 이러쿵쿵 저러쿵쿵 회사 소개 어쩌구구 저쩌구구 이러쿵쿵 저러쿵쿵 회사 소개 어쩌구구 저쩌구구 이러쿵쿵 저러쿵쿵 회사 소개 어쩌구구 저쩌구구 이러쿵쿵 저러쿵쿵</p>
+
+     <br>
+     <h2>광고</h2>
+     <p>광고 앞뒤가 똑같은 전화번호~ 청정라거 테라~ 도미노 피자~ 아메리카노 좋아좋아좋아~ 광고 앞뒤가 똑같은 전화번호~ 청정라거 테라~ 도미노 피자~ 아메리카노 좋아좋아좋아~ 광고 앞뒤가 똑같은 전화번호~ 청정라거 테라~ 도미노 피자~ 아메리카노 좋아좋아좋아~ 광고 앞뒤가 똑같은 전화번호~ 청정라거 테라~ 도미노 피자~ 아메리카노 좋아좋아좋아~ </p>
+
+</body>
+</html>
