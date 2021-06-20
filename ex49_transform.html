@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex49_transform</title>
+</head>
+<style>
+
+    /* 너비: 1000px + 가운데 정렬 */
+
+    /* 
+        인접한 인라인 태그 사이의 공백을 없애는 방법
+        1. 직접 공백을 지운다. > 비권장
+        2. float
+        3. font-siz: 0;
+    */
+
+    #menu {
+        /* width: 1000px; */
+        width: 630px;
+        margin: 0 auto;
+        font-size: 0;
+        border: 0px solid black;
+        /* text-align: center; */
+
+        transform: translate(0px, -100px);
+    }
+
+    /* #menu:hover {
+        transform: translate(0px, -10px);
+    } */
+
+    #menu > img:hover {
+        /* 
+            img는 menu의 자식, menu를 아예 위로 올려 버림 -> img의 (0,0)은 현재 올라가 있는 그곳이 된다.
+        */
+        transform: translate(0px, 90px);
+    }
+
+    /* #menu > img {
+        float: left;
+    }
+
+    #menu::after {
+        content: "";
+        display: block;
+        clear: both;
+
+        <div style="clear: both;"></div>와 같은 역할을 하는 코드
+    } */
+
+    section {
+        width: 1000px;
+        margin: 0 auto;
+    }
+
+
+    #submenu {
+        /* border: 1px solid black; */
+        width: 126px;
+        font-size: 0;
+        transform: translate(-110px, 0px);
+    }
+
+    #submenu > img:hover {
+        transform: translate(100px, 0px);
+    }
+    
+</style>
+<body>
+    <!-- 
+        ex49_transform.html
+     -->
+
+     <nav id="menu">
+         <!-- img[src=images/rect_icon$$.png]*5 -->
+         <img src="images/rect_icon01.png" alt="">
+         <img src="images/rect_icon02.png" alt="">
+         <img src="images/rect_icon03.png" alt="">
+         <img src="images/rect_icon04.png" alt="">
+         <img src="images/rect_icon05.png" alt="">
+     </nav>
+
+     <nav id="submenu">
+         <!-- img[src=images/rect_icon$$.png]*5 -->
+         <img src="images/rect_icon01.png" alt="">
+         <img src="images/rect_icon02.png" alt="">
+         <img src="images/rect_icon03.png" alt="">
+         <img src="images/rect_icon04.png" alt="">
+         <img src="images/rect_icon05.png" alt="">
+     </nav>
+
+     <section>
+        <h1>Transform Menu</h1>
+        
+        <!-- ((h2>lorem5)+(p>lorem)*3)*5 -->
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, molestias quo nulla laudantium ex debitis! Ipsum beatae assumenda dicta aliquam in quidem maxime? Nisi dignissimos excepturi error magnam ipsam voluptate?</p>
+        <p>Delectus voluptates, est hic minus porro quam iste illo mollitia vitae ipsum nisi nulla vero maxime corporis placeat? Iusto doloremque ipsam dolor perferendis explicabo qui. Similique sequi delectus animi voluptatum!</p>
+        <p>Unde, architecto rem voluptatem aspernatur nam quaerat explicabo recusandae voluptatibus autem impedit minus aperiam sed fugit eum minima porro omnis obcaecati facilis quod veniam corrupti, pariatur praesentium? Architecto, maiores cumque.</p>
+        <h2>Et repellendus earum soluta impedit.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt accusamus libero quasi. Recusandae beatae est architecto veniam maiores totam, reprehenderit magni mollitia optio deserunt cumque tempora, accusamus sed, aperiam voluptas!</p>
+        <p>Earum iure repellat sed atque quam odio, sapiente quidem. Quae nostrum provident quam delectus vel laborum itaque, repudiandae iste exercitationem voluptatem! Debitis laborum nulla fugit rem, vero totam cum maxime!</p>
+        <p>Tempora corrupti nesciunt laudantium neque, distinctio magni? Iusto voluptas iure alias accusamus, illo cum nam odio impedit autem obcaecati facere porro quidem in ipsa accusantium nemo eveniet aliquam ratione ipsum!</p>
+        <h2>Eveniet similique aliquid doloribus a.</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem tempore debitis pariatur non natus cupiditate optio, hic velit minima blanditiis unde laborum porro ullam nostrum assumenda voluptas nisi. Unde, perferendis.</p>
+        <p>Ipsum, aspernatur neque voluptate doloribus recusandae molestiae minus necessitatibus suscipit! Atque modi natus esse eius fugiat amet accusamus vitae pariatur neque molestias, laboriosam facere quisquam odio quidem odit maiores! Dicta?</p>
+        <p>Magni accusantium sed ipsum provident voluptatem totam inventore sequi repellat tempore, placeat alias. Blanditiis dolore autem voluptatem minima, quod veritatis debitis nostrum dolor magni fugit ab deserunt quisquam soluta tempore?</p>
+        <h2>Dolorem consequatur totam dolores similique.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quidem amet est, accusamus aliquid iusto possimus et quos iste rem facere dolorum ipsam, similique repellat? Aliquid obcaecati ratione iste laborum!</p>
+        <p>Deserunt, nostrum placeat! Facilis odit ab nisi quia optio omnis cum, sapiente voluptatum esse nobis! Architecto iste non ab iure asperiores quasi veritatis, sint in id explicabo praesentium nobis adipisci.</p>
+        <p>Laborum alias sint illo at perspiciatis nisi aliquam possimus doloribus ipsa facilis molestiae doloremque sequi temporibus nemo delectus in vel, ex saepe voluptatem blanditiis, aut dolorem reprehenderit. Doloribus, provident eum.</p>
+        <h2>Eum corrupti ex reprehenderit esse!</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusamus sequi molestias quam rem ab qui ratione officia reiciendis rerum! Assumenda atque obcaecati a tenetur enim, quibusdam consequuntur? Magni, fugiat.</p>
+        <p>Incidunt, nulla soluta, error officia natus illum facilis dolorum corrupti aliquam tempora, nam voluptatum nisi? Architecto ipsam error beatae laudantium assumenda amet, iusto dolore minima, consequatur soluta consectetur numquam culpa!</p>
+        <p>Quisquam modi harum laborum alias ipsa ab, distinctio hic deleniti, nemo odio ratione quam dicta quasi provident. Debitis delectus nam, dolores suscipit cum neque repellendus? Libero dignissimos ratione molestias quam!</p>
+
+
+     </section>
+</body>
+</html>

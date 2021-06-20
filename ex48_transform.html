@@ -4,11 +4,134 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ex489_transform</title>
 </head>
+<link rel="stylesheet" href="css/example.css">
+<style>
+    /* 
+        Transform, 변형
+        - 요소의 위치, 크기, 회전, 비틀기(왜곡) 변형을 적용
+        - transform: 값;
+        - 동시에 여러개 적용도 가능
+
+        값(함수)
+        1. translate() : 위치변형 (position, relative 유사)
+        2. scale() : 배율(크기) 변형
+        3. rotate() : 회전 변형
+        -----------------------------
+        4. skew() : 왜곡 변형
+        5. matrix(): x
+    */
+
+    .box {margin: 10px 0;}
+
+    #box1 {
+        transform: translate(100px, 100px)
+    }
+
+    /* 
+        #box1의 margin-bottom = #box2의 margin-top => 두 값이 서로 다를 경우 덧셈이 아니라 더 큰 겂이 적용된다.
+        * margin 정책: 인접한 요소의 margin이 겹치면 큰 값만 적용된다.
+    */
+    /* 
+    #box1 {margin-bottom: 10px;}
+    #box2 {margin-bottom: 20px; margin-top: 20px;}
+    */
+
+    /* 
+        레이아웃 작업:  position
+
+
+    */
+    /* #cat > img:hover {
+        transform: translate(0px, -15px);
+    } */
+
+    /* #cat:hover > img {
+        transform: translate(0px, -15px);
+    } */
+
+    /* #cat > img:hover + img {
+        transform: translate(0px, -15px);
+    } */
+
+    /* #cat > img:hover ~ img {
+        transform: translate(0px, -15px);
+    } */
+
+    /* #cat > img:nth-child(even) {
+        transform: translate(0px, -15px);
+    } */
+
+    /* #cat > img:nth-child(odd) {
+        transform: translate(0px, -15px);
+    } */
+
+    #cat > img {
+        opacity: .3;
+    }
+
+    #cat > img:hover {
+        /* transform: scale(1,2); */
+        transform: rotate(15deg);
+        opacity: 1;
+    }
+
+
+    #box2 {
+        /* 
+            scale로 크기를 조절하는 것과 width, height로 조절하는 건 다르다.
+            border의 두께, content 영역이 서로 다르다.
+         */
+        /* transform: scale(1.5, 1.5); */
+        /* transform: scale(0.5, 0.5); */
+        /* transform: scale(-1, 0); */
+        /* transform: scale(0, -1); */
+        /* transform: scale(-1, -1); */
+
+        transition: transform 1s;
+    }
+
+    #box2:hover {
+        transform: scale(-1, 1);
+    }
+
+    #box3 {
+        /* transform: rotate(-30deg); */
+        transform: skew(30deg, 0deg);
+    }
+
+
+</style>
 <body>
     <!-- 
         ex48_transform.html
-     -->
+    -->
+
+     <!-- div#box$.box{상자$}*3 -->
+     <div id="box1" class="box box-border5 box-medium bgcolor-red">상자1</div>
+     <div id="box2" class="box box-border5 box-medium bgcolor-yellow">상자2</div>
+     <div id="box3" class="box box-border5 box-medium bgcolor-blue">상자3</div>
+
+     <h1>고양이</h1>
+
+     <!-- div#cat>img[src="images/catty$$.png"]*5 -->
+     <div id="cat">
+         <img src="images/catty01.png" alt="">
+         <img src="images/catty02.png" alt="">
+         <img src="images/catty03.png" alt="">
+         <img src="images/catty04.png" alt="">
+         <img src="images/catty05.png" alt="">
+    </div>
+
+    <div>
+        <input type="text" style="color: red; transform: rotate(180deg);">
+    </div>
+
+    <div>
+        <input type="text" style="color: red; transform: scale(-1, 1);">
+    </div>
+
+    <br><br><br><br><br><br><br><br><br>
 </body>
 </html>

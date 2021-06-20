@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex61</title>
+</head>
+<style>
+    #box {
+        border: 1px solid black;
+        width: 1400px;
+        /* height: 750px; */
+        padding-top: 20px;
+    }
+
+    #box .ball {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 1px solid black;
+        font-size: 4.4em;
+        font-weight: bold;
+        text-align: center;
+        position: absolute;
+        transition-duration: 5s;
+    }
+
+    #box .line {
+        border-bottom: 1px solid black;
+        height: 110px;
+        margin-top: 10px;
+    }
+
+    #box #line5 {
+        margin-bottom: -1px;
+        border: 0;
+    }
+
+    #ball1 {
+        background-color: #FF6347;
+        transition-timing-function: linear;
+        left: 10px;
+        top : 48px;
+    }
+
+    #ball2 {
+        background-color: #FFD700;
+        transition-timing-function: ease;
+        left: 10px;
+        top: 168px;
+    }
+
+    #ball3 {
+        background-color: #FFA500;
+        transition-timing-function: ease-in;
+        left: 10px;
+        top: 290px;
+    }
+
+    #ball4 {
+        background-color: #ADFF2F;
+        transition-timing-function: ease-out;
+        left: 10px;
+        top: 410px;
+    }
+
+    #ball5 {
+        background-color: #6495ED;
+        transition-timing-function: ease-in-out;
+        left: 10px;
+        top: 532px;
+    }
+
+    #box:hover .ball {
+        left: 1300px;
+        transform: rotate(3600deg);
+    }
+    
+</style>
+<body>
+    <!-- 
+        ex61.html
+        
+        https://pinnpublic.github.io/example/css/exam10.htm
+     -->
+     <div id="box">
+         <div id="ball1" class="ball">A</div>
+         <div id="line1" class="line"></div>
+         <div id="ball2" class="ball">B</div>
+         <div id="line2" class="line"></div>
+         <div id="ball3" class="ball">C</div>
+         <div id="line3" class="line"></div>
+         <div id="ball4" class="ball">D</div>
+         <div id="line4" class="line"></div>
+         <div id="ball5" class="ball">E</div>
+         <div id="line5" class="line"></div>
+         
+     </div>
+</body>
+</html>
