@@ -5,50 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ex31_zindex</title>
+    <style>
+        .box {
+            border : 1px solid black;
+            width : 150px;
+            height : 150px;
+        }
+    
+        #box1 {background-color: tomato;}
+        #box2 {background-color: gold;}
+        #box3 {background-color: cornflowerblue;}
+    
+        #box1 {
+            /* 
+                position : static
+                - left, top -> 적용x
+                - z-index -> 적용x
+            */
+            z-index: 4;
+        }
+    
+        #box2 {
+            position: absolute;
+            left: 100px;
+            top: 100px;
+            z-index: 3;
+        }
+    
+        #box3 {
+            position: absolute;
+            left: 150px;
+            top: 150px;
+            z-index: 2;
+        }
+    
+        #box4 {
+            background-color: chartreuse;
+            position: absolute;
+            right : 0px;
+            bottom : 0px;  
+        }
+    </style>
 </head>
-
-<style>
-    .box {
-        border : 1px solid black;
-        width : 150px;
-        height : 150px;
-    }
-
-    #box1 {background-color: tomato;}
-    #box2 {background-color: gold;}
-    #box3 {background-color: cornflowerblue;}
-
-    #box1 {
-        /* 
-            position : static
-            - left, top -> 적용x
-            - z-index -> 적용x
-        */
-        z-index: 4;
-    }
-
-    #box2 {
-        position: absolute;
-        left: 100px;
-        top: 100px;
-        z-index: 3;
-    }
-
-    #box3 {
-        position: absolute;
-        left: 150px;
-        top: 150px;
-        z-index: 2;
-    }
-
-    #box4 {
-        background-color: chartreuse;
-        position: absolute;
-        right : 0px;
-        bottom : 0px;  
-    }
-</style>
-
 <body>
     <!-- 
         ex31_zindex.html

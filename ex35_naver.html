@@ -5,158 +5,157 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ex35_naver</title>
+    <style>
+        body{
+            background-color: #E4E5EA;
+        }
+    
+        #weather {
+            background-color: #fff;
+            width: 402px;
+            margin: 20px auto;
+            border: 1px solid #CCC;
+        }
+    
+        #weather > header {
+            /* border: 1px solid black; */
+            /* width: 304px; */
+            margin : 0px 49px;
+            margin-top : 55px;
+        }
+    
+        #weather > section {
+            /* border: 1px solid black; */
+            /* width: 304px; */
+            margin : 0px 49px;
+        }
+    
+        #weather > footer {
+            /* border: 1px solid black; */
+            /* width: 304px; */
+            margin : 0px 49px;
+            margin-bottom: 55px;
+        }
+    
+        #weather .title {
+            font-size: 19px;
+            color: #242424;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+    
+        #weather .date {
+            margin-bottom: 20px;
+        }
+    
+        #weather .date .year,  #weather .date .month {
+            font-size: 14px;
+            color: #000;
+            font-weight: bold;
+            display: inline-block;
+            width: 146px;
+            height: 30px;
+            border: 1px solid #ccc;
+            background-color: #FAFBFD;
+            text-align: center;
+    
+            /* 글자를 수직으로 가운데 정렬 할 때, padding-top을 주고, 그 크기만큼 height에서 뺀다. */
+            padding-top : 10px;
+        }
+    
+        #weather .date .month {
+            /* 선이 겹쳐서 두꺼워 보임 -> 한 곳의 마진은 마이너스 값 넣어주면 해결 가능 */
+            margin-left: -1px;
+        }
+    
+        #weather > footer {
+            font-size : 12px;
+            color: #8f8f8f;
+            margin-bottom : 22px;
+        }
+    
+        #weather footer span {
+            color : #68A1ff;
+        }
+    
+        #weather footer div:last-child {
+            color : #68a1ff;
+            margin-top : 4px;
+           
+        }
+    
+        #weather table {
+            /* border : 1px solid black; */
+            border-collapse: collapse;
+        }
+    
+        #weather tr {
+            border-bottom: 1px solid #eee;
+        }
+    
+        #weather .header td {
+            height: 55px;
+            font-size: 15px;
+            color: #666;
+        }
+    
+        #weather .header .red, #weather .data span.red {
+            color : #ff2c2c;
+        }
+    
+        #weather .header .blue, #weather .data span.blue {
+            color: #5998ff;
+        }
+    
+        #weather td {
+            /* border : 1px solid black; */
+            width : 44px;
+            height: 142px;
+            text-align: center;
+        }
+    
+        #weather .data td span {
+            display: block;
+            margin: 0 auto;
+        }
+    
+        #weather .data .date {
+            font-size : 16px;
+            color: #424242;
+            margin-bottom: 12px;
+        }
+    
+        #weather .data .icon {
+            border: 1px solid black;
+            width: 34px;
+            height: 34px;
+            background-image: url(images/icon.png);
+            background-position: 83.33333% 100%;
+            background-size : 238px 204.34px;
+            margin-bottom: 2px;
+        }
+    
+        #weather .data .max {
+            font-size: 12px;
+            color: #8f8f8f;
+        }
+    
+        #weather .data .min {
+            font-size: 12px;
+            color: #8f8f8f;
+        }
+    
+        #weather .data .rainfall {
+            font-size: 12px;
+            color: #68A1FF;        
+        }
+    
+        #weather .data .date.past {
+            opacity : .3;
+        }
+    
+    </style>
 </head>
-
-<style>
-    body{
-        background-color: #E4E5EA;
-    }
-
-    #weather {
-        background-color: #fff;
-        width: 402px;
-        margin: 20px auto;
-    }
-
-    #weather > header {
-        /* border: 1px solid black; */
-        /* width: 304px; */
-        margin : 0px 49px;
-        margin-top : 55px;
-    }
-
-    #weather > section {
-        /* border: 1px solid black; */
-        /* width: 304px; */
-        margin : 0px 49px;
-    }
-
-    #weather > footer {
-        /* border: 1px solid black; */
-        /* width: 304px; */
-        margin : 0px 49px;
-        margin-bottom: 55px;
-    }
-
-    #weather .title {
-        font-size: 19px;
-        color: #242424;
-        font-weight: bold;
-        margin-bottom: 20px;
-    }
-
-    #weather .date {
-        margin-bottom: 20px;
-    }
-
-    #weather .date .year,  #weather .date .month {
-        font-size: 14px;
-        color: #000;
-        font-weight: bold;
-        display: inline-block;
-        width: 146px;
-        height: 30px;
-        border: 1px solid #ccc;
-        background-color: #FAFBFD;
-        text-align: center;
-
-        /* 글자를 수직으로 가운데 정렬 할 때, padding-top을 주고, 그 크기만큼 height에서 뺀다. */
-        padding-top : 10px;
-    }
-
-    #weather .date .month {
-        /* 선이 겹쳐서 두꺼워 보임 -> 한 곳의 마진은 마이너스 값 넣어주면 해결 가능 */
-        margin-left: -1px;
-    }
-
-    #weather > footer {
-        font-size : 12px;
-        color: #8f8f8f;
-        margin-bottom : 22px;
-    }
-
-    #weather footer span {
-        color : #68A1ff;
-    }
-
-    #weather footer div:last-child {
-        color : #68a1ff;
-        margin-top : 4px;
-       
-    }
-
-    #weather table {
-        /* border : 1px solid black; */
-        border-collapse: collapse;
-    }
-
-    #weather tr {
-        border-bottom: 1px solid #eee;
-    }
-
-    #weather .header td {
-        height: 55px;
-        font-size: 15px;
-        color: #666;
-    }
-
-    #weather .header .red, #weather .data span.red {
-        color : #ff2c2c;
-    }
-
-    #weather .header .blue, #weather .data span.blue {
-        color: #5998ff;
-    }
-
-    #weather td {
-        /* border : 1px solid black; */
-        width : 44px;
-        height: 142px;
-        text-align: center;
-    }
-
-    #weather .data td span {
-        display: block;
-        margin: 0 auto;
-    }
-
-    #weather .data .date {
-        font-size : 16px;
-        color: #424242;
-        margin-bottom: 12px;
-    }
-
-    #weather .data .icon {
-        border: 1px solid black;
-        width: 34px;
-        height: 34px;
-        background-image: url(images/icon.png);
-        background-position: 83.33333% 100%;
-        background-size : 238px 204.34px;
-        margin-bottom: 2px;
-    }
-
-    #weather .data .max {
-        font-size: 12px;
-        color: #8f8f8f;
-    }
-
-    #weather .data .min {
-        font-size: 12px;
-        color: #8f8f8f;
-    }
-
-    #weather .data .rainfall {
-        font-size: 12px;
-        color: #68A1FF;        
-    }
-
-    #weather .data .date.past {
-        opacity : .3;
-    }
-
-</style>
-
 <body>
     <!-- 
         ex35_naver.html

@@ -5,59 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ex59</title>
+    <style>
+
+        #box1, #box2, #box3, #box4 {
+            width: 680px;
+            margin: 10px auto;
+        }
+    
+        #box1 > div, #box2 > div, #box3 > div, #box4 > div {
+            border: 10px solid black;
+            float: left;
+            margin: 0 -10px 10px 0;
+            overflow: hidden;
+        }
+    
+        #box1 div img {
+            display: block;
+            transform: translate(-126px, 0px);
+            transition: all .5s;
+        }
+        #box1 div:hover img {
+            transform: translate(0px, 0px);
+        }
+    
+        #box2 div img {
+            display: block;
+            opacity: 0;
+            transition: all .5s;
+        }
+        #box2 div:hover img {
+            opacity: 1;
+        }
+    
+        #box3 div img {
+            display: block;
+            transform: scale(0, 0);
+            transition: all .5s;
+        }
+        #box3 div:hover img {
+            transform: scale(1, 1);
+        }
+    
+        #box4 div img {
+            display: block;
+            transform: rotate(0deg) translate(-126px, 0px) scale(0, 0);
+            opacity: 0;
+            transition: all .5s;
+        }
+        #box4 div:hover img {
+            transform: rotate(360deg) translate(0px, 0px) scale(1, 1);
+            opacity: 1;
+        }
+    </style>
 </head>
-<style>
 
-    #box1, #box2, #box3, #box4 {
-        width: 680px;
-        margin: 10px auto;
-    }
-
-    #box1 > div, #box2 > div, #box3 > div, #box4 > div {
-        border: 10px solid black;
-        float: left;
-        margin: 0 -10px 10px 0;
-        overflow: hidden;
-    }
-
-    #box1 div img {
-        display: block;
-        transform: translate(-126px, 0px);
-        transition: all .5s;
-    }
-    #box1 div:hover img {
-        transform: translate(0px, 0px);
-    }
-
-    #box2 div img {
-        display: block;
-        opacity: 0;
-        transition: all .5s;
-    }
-    #box2 div:hover img {
-        opacity: 1;
-    }
-
-    #box3 div img {
-        display: block;
-        transform: scale(0, 0);
-        transition: all .5s;
-    }
-    #box3 div:hover img {
-        transform: scale(1, 1);
-    }
-
-    #box4 div img {
-        display: block;
-        transform: rotate(0deg) translate(-126px, 0px) scale(0, 0);
-        opacity: 0;
-        transition: all .5s;
-    }
-    #box4 div:hover img {
-        transform: rotate(360deg) translate(0px, 0px) scale(1, 1);
-        opacity: 1;
-    }
-</style>
 <body>
     <!-- 
         ex59.html

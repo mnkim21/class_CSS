@@ -5,26 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ex56</title>
+    <style>
+        #box {
+            width: 500px;
+            height: 200px;
+            border: 1px solid black;
+            overflow: hidden;
+        }
+    
+        #txt {
+            width: 500px;
+            transition: all 10s;
+            transition-timing-function: linear;
+        }
+    
+        #box:hover > #txt {
+            transform: translate(0px, -5250px);
+        }
+    
+    </style>
 </head>
-<style>
-    #box {
-        width: 500px;
-        height: 200px;
-        border: 1px solid black;
-        overflow: hidden;
-    }
 
-    #txt {
-        width: 500px;
-        transition: all 10s;
-        transition-timing-function: linear;
-    }
-
-    #box:hover > #txt {
-        transform: translate(0px, -5250px);
-    }
-
-</style>
 <body>
     <!-- 
         ex56.html 

@@ -5,46 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ex17_box</title>
+    <style>
+
+        .list {
+            border : 1px solid #555;
+        
+            /* 
+                collapse: 인접한 border끼리의 상태 
+                - seperate, collapse
+            */
+            border-collapse : collapse;
+            width : 700px;
+        
+        }
+        
+        /* 그룹선택자는 각각 부모를 써줘야됨 */
+        .list th, .list td {
+            border : 1px solid #555;
+            padding : 5px;
+        }
+        
+        .list td {
+            text-align: center;
+        }
+        
+        .list col1 {width : 50px;}
+        .list col2 {width : 80px;}
+        .list col3 {width : 50px;}
+        .list col4 {width : 70px;}
+        .list col5 {width : 450px;}
+        
+        .list th { background-color: #DDD;}
+        
+        .list .cell5 {text-align: left;}
+        
+        .list tr:hover {background-color: gold;}
+        
+        </style>
 </head>
-
-<style>
-
-.list {
-    border : 1px solid #555;
-
-    /* 
-        collapse: 인접한 border끼리의 상태 
-        - seperate, collapse
-    */
-    border-collapse : collapse;
-    width : 700px;
-
-}
-
-/* 그룹선택자는 각각 부모를 써줘야됨 */
-.list th, .list td {
-    border : 1px solid #555;
-    padding : 5px;
-}
-
-.list td {
-    text-align: center;
-}
-
-.list col1 {width : 50px;}
-.list col2 {width : 80px;}
-.list col3 {width : 50px;}
-.list col4 {width : 70px;}
-.list col5 {width : 450px;}
-
-.list th { background-color: #DDD;}
-
-.list .cell5 {text-align: left;}
-
-.list tr:hover {background-color: gold;}
-
-</style>
-
 <body>
     <!-- 
         ex17_box.html

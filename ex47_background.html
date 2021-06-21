@@ -5,81 +5,89 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ex47_background</title>
+    <link rel="stylesheet" href="css/example.css">
+    <style>
+        #box1 {
+            width: 600px;
+
+            /* 
+                background-color
+                1. solid color, 단색
+                2. gradient color, 색의변화(*)를 시각적으로 표현
+                    a. 선형
+                    b. 원형
+
+            */
+            /* background: linear-gradient(green, yellow); */
+            /* background: linear-gradient(to right, black, white); */
+            /* background: linear-gradient(to left, black, white); */
+            /* background: linear-gradient(to bottom, black, white); */
+            /* background: linear-gradient(to top, black, white); */
+            /* background: linear-gradient(45deg, black, white); */
+            /* background: linear-gradient(to right, red, orange, yellow, green, blue, purple); */
+            /* background: linear-gradient(to right, rgb()); */
+
+            /* background: radial-gradient(red, blue, yellow); */
+            /* background: radial-gradient( circle, red, blue, yellow); */
+
+            /* 
+                background-image
+                - 다중 배경 이미지
+            */
+            /* background-image: url(images/catty01.png), url(images/catty02.png), url(images/catty03.png);
+            background-repeat: no-repeat;, repeat-x, repeat-y;
+            background-position: left top, right top, left bottom; */
+
+
+
+            /* 
+                배경 이미지 크기
+            */
+            background-image: url(images/wall25.jpg);
+            /* background-size: 600px 400px; */
+            /* background-size: 300px 200px; */
+            /* background-size: 30px 20px; */
+            /* background-size: 100% 100%;*/ /* 컨테이너 기준 */
+            /* background-size: auto auto;*/ /* 배경 이미지를 기준 */
+            
+            /* 너비는 상자를 채우고 높이는 종횡비 유지 계산 */
+
+            /* Case 1.
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+            background-position: center center;
+            */
+
+            /* Case 2.         
+            background-size: auto 100%;
+            background-repeat: no-repeat;
+            background-position: center center;
+            */
+
+            /* background-size: cover;
+            background-position: center center; */
+        }
+
+        /* 
+        #box1:hover {
+            background: linear-gradient(white, black);
+        } 
+        */
+
+        /* 풀 사이즈 배경 */
+        html {
+            height: 100%;
+            background-image: url(images/back.jpg);
+            background-repeat: no-repeat;
+            /* background-size: 100% 100%; */
+            background-position: center center;
+            /* background-size: contain; */
+            background-size: cover;
+        }
+
+
+    </style>
 </head>
-<link rel="stylesheet" href="css/example.css">
-<style>
-    #box1 {
-        width: 600px;
-
-        /* 
-            background-color
-            1. solid color, 단색
-            2. gradient color, 색의변화(*)를 시각적으로 표현
-                a. 선형
-                b. 원형
-
-        */
-        /* background: linear-gradient(green, yellow); */
-        /* background: linear-gradient(to right, black, white); */
-        /* background: linear-gradient(to left, black, white); */
-        /* background: linear-gradient(to bottom, black, white); */
-        /* background: linear-gradient(to top, black, white); */
-        /* background: linear-gradient(45deg, black, white); */
-        /* background: linear-gradient(to right, red, orange, yellow, green, blue, purple); */
-        /* background: linear-gradient(to right, rgb()); */
-
-        /* background: radial-gradient(red, blue, yellow); */
-        /* background: radial-gradient( circle, red, blue, yellow); */
-
-        /* 
-            background-image
-            - 다중 배경 이미지
-        */
-        /* background-image: url(images/catty01.png), url(images/catty02.png), url(images/catty03.png);
-        background-repeat: no-repeat;, repeat-x, repeat-y;
-        background-position: left top, right top, left bottom; */
-
-
-
-        /* 
-            배경 이미지 크기
-        */
-        background-image: url(images/wall25.jpg);
-        /* background-size: 600px 400px; */
-        /* background-size: 300px 200px; */
-        /* background-size: 30px 20px; */
-        /* background-size: 100% 100%;*/ /* 컨테이너 기준 */
-        /* background-size: auto auto;*/ /* 배경 이미지를 기준 */
-        
-        /* 너비는 상자를 채우고 높이는 종횡비 유지 계산 */
-
-        /* Case 1.
-        background-size: 100% auto;
-        background-repeat: no-repeat;
-        background-position: no-repeat;
-         */
-
-        /* Case 2.         
-         background-size: auto 100%;
-         background-position: center center;
-         */
-         /* background-size: cover;
-         background-position: center center; */
-    }
-
-    /* 풀 사이즈 배경 */
-    html {
-        height: 100%;
-        background-image: url(images/back.jpg);
-        background-repeat: no-repeat;
-        /* background-size: 100% 100%; */
-        background-position: center center;
-        /* background-size: contain; */
-        background-size: cover;
-    }
-
-
-</style>
 <body>
     <!-- 
         ex47_background.html

@@ -5,42 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ex24_box</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+        }
+    
+        #box1 {
+            background-color: tomato;
+        }
+    
+        #box2 {
+            background-color: gold;
+            /* 
+                상자2의 크기(너비, 높이)
+                1. 너비(200px), 높이(200px)
+                width, height - 객체의 크기(x)
+                              - 컨텐츠 영역의 크기(o)★★★★★
+             */
+    
+             /* 2. 너비(220px), 높이(220px) */
+             border: 10px solid black;
+    
+             /* 3. 너비(260px), 높이(260px) */
+             padding : 20px;
+    
+             /* 1. 너비(260px), 높이(260px) */
+             margin : 30px;
+        }
+    
+        #box3 {
+            background-color: skyblue;
+        }
+    </style>
 </head>
-
-<style>
-    .box {
-        width: 200px;
-        height: 200px;
-    }
-
-    #box1 {
-        background-color: tomato;
-    }
-
-    #box2 {
-        background-color: gold;
-        /* 
-            상자2의 크기(너비, 높이)
-            1. 너비(200px), 높이(200px)
-            width, height - 객체의 크기(x)
-                          - 컨텐츠 영역의 크기(o)★★★★★
-         */
-
-         /* 2. 너비(220px), 높이(220px) */
-         border: 10px solid black;
-
-         /* 3. 너비(260px), 높이(260px) */
-         padding : 20px;
-
-         /* 1. 너비(260px), 높이(260px) */
-         margin : 30px;
-    }
-
-    #box3 {
-        background-color: skyblue;
-    }
-</style>
-
 <body>
     <!-- 
         ex24_box.html

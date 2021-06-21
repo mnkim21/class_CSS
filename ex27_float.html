@@ -5,39 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ex27_float</title>
+    <style>
+        .box, .link {
+            border: 1px solid black;
+        }
+    
+        .link {
+            float : left;
+            margin-right : 5px;
+        }
+    
+        .box {
+            width: 150px;
+            height: 150px;
+    
+            /* 순서 헷갈리지 않게 조심 left : 빨-노-초/ right : 초-노-빨 */
+            float: right;
+        }
+    
+        #box1 {
+            background-color: red;
+        }
+    
+        #box2 {
+            background-color: yellow;
+        }
+    
+        #box3 {
+            background-color: green;
+        }
+    </style>
 </head>
-
-<style>
-    .box, .link {
-        border: 1px solid black;
-    }
-
-    .link {
-        float : left;
-        margin-right : 5px;
-    }
-
-    .box {
-        width: 150px;
-        height: 150px;
-
-        /* 순서 헷갈리지 않게 조심 left : 빨-노-초/ right : 초-노-빨 */
-        float: right;
-    }
-
-    #box1 {
-        background-color: red;
-    }
-
-    #box2 {
-        background-color: yellow;
-    }
-
-    #box3 {
-        background-color: green;
-    }
-</style>
-
 <body>
     <!-- 
         ex27_float.html

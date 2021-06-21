@@ -5,102 +5,100 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ex36_naver</title>
+    <style>
+        #weather {
+            border: 1px solid #eee;
+            width: 540px;
+            height: 220px;
+        }
+        
+        #weather header {
+            height: 26px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #242424;
+    
+            padding: 0 20px;
+            margin-top: 18px;
+        }
+    
+        #weather .item {
+            border-right: 1px solid #eee;
+    
+            float :left;
+            padding: 0 20px;
+            margin-top: 10px;
+            
+            text-align: center;
+        }
+    
+        #weather .item.last {
+            border: 0px;
+        }
+    
+        #weather .item .week {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+    
+        #weather .item .week .day{
+            font-size: 14px;
+            color: #242424;
+        }
+    
+        #weather .item .week .date{
+            font-size: 13px;
+            color : #8f8f8f;
+        }
+    
+        #weather .item .week .greenbar {
+            background-image: url(images/btn_dday.png);
+            background-position: 0 0;
+            
+            font-size: 12px;
+        }
+    
+        #weather .item .week .today{
+            background-image: url(images/btn_dday.png);
+            background-position: 100% 0;
+    
+            font-size: 12px;
+            font-weight: 600;
+            color: #fff;
+        }
+    
+        #weather .item .amicon, #weather .item .pmicon {
+            font-size: 13px;
+            color: #8f8f8f;
+            padding-bottom : 10px;
+        }
+        
+        #weather .item .amicon img, #weather .item .pmicon img {
+            width: 30px;
+            height: 30px;
+    
+            float: left;
+            padding-right: 10px;
+            padding-bottom: 10px;
+        }
+    
+        #weather .item .amicon .txt, #weather .item .pmicon .txt{
+            float: left;
+            margin-top : 5px;
+        }
+    
+        #weather .item .amicon .rain, #weather .item .pmicon .rain {
+            color : #73b9ff;
+        }
+    
+        #weather .item .temp {
+            font-size: 14px;
+            font-weight: bold;
+            color: #242424;
+            margin-top : 15px;
+        }
+    </style>
 </head>
-
-<style>
-    #weather {
-        border: 1px solid #eee;
-        width: 540px;
-        height: 220px;
-    }
-    
-    #weather header {
-        height: 26px;
-        font-size: 14px;
-        font-weight: bold;
-        color: #242424;
-
-        padding: 0 20px;
-        margin-top: 18px;
-    }
-
-    #weather .item {
-        border-right: 1px solid #eee;
-
-        float :left;
-        padding: 0 20px;
-        margin-top: 10px;
-        
-        text-align: center;
-    }
-
-    #weather .item.last {
-        border: 0px;
-    }
-
-    #weather .item .week {
-        text-align: center;
-        margin-bottom: 15px;
-    }
-
-    #weather .item .week .day{
-        font-size: 14px;
-        color: #242424;
-    }
-
-    #weather .item .week .date{
-        font-size: 13px;
-        color : #8f8f8f;
-    }
-
-    #weather .item .week .greenbar {
-        background-image: url(images/btn_dday.png);
-        background-position: 0 0;
-        
-        font-size: 12px;
-    }
-
-    #weather .item .week .today{
-        background-image: url(images/btn_dday.png);
-        background-position: 100% 0;
-
-        font-size: 12px;
-        font-weight: 600;
-        color: #fff;
-    }
-
-    #weather .item .amicon, #weather .item .pmicon {
-        font-size: 13px;
-        color: #8f8f8f;
-        padding-bottom : 10px;
-    }
-    
-    #weather .item .amicon img, #weather .item .pmicon img {
-        width: 30px;
-        height: 30px;
-
-        float: left;
-        padding-right: 10px;
-        padding-bottom: 10px;
-    }
-
-    #weather .item .amicon .txt, #weather .item .pmicon .txt{
-        float: left;
-        margin-top : 5px;
-    }
-
-    #weather .item .amicon .rain, #weather .item .pmicon .rain {
-        color : #73b9ff;
-    }
-
-    #weather .item .temp {
-        font-size: 14px;
-        font-weight: bold;
-        color: #242424;
-        margin-top : 15px;
-    }
-</style>
-
 <body>
     <!-- 
         ex36_naver.html

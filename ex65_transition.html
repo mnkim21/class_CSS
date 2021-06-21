@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex65_transition</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <style>
+    #apple {
+        font-size: 30em;
+        color: red;
+    }
+
+    button {
+        background-color: black;
+        color: white;
+        border: 0;
+        outline: none;
+        padding: 10px;
+    }
+
+    button > i {
+        color: red;
+        font-size: 30px;
+    }
+
+
+
+    html, body {
+        height: 100%;
+    }
+
+    .char {
+        font-size: 5em;
+        color: tomato;
+        display: block;
+        width: 60px;
+        margin: 0 auto;
+        /* margin-top: 270px; */
+
+        transform: scale(100, 100);
+        opacity: 0;
+
+        animation-name: keychar;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in;
+    }
+
+    .char:nth-child(1){animation-delay: 0s;}
+    .char:nth-child(2){animation-delay: .5s; color: goldenrod;}
+    .char:nth-child(3){animation-delay: 1.5s; color: cornflowerblue;}
+    
+    @keyframes keychar {
+        0% {
+            transform: scale(100, 100);
+            opacity: 0;
+        }
+
+        100% {
+                transform: scale(1, 1);
+                opacity: 1;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        ex65_transition.html
+
+        사이트: font awesome
+     -->
+     <!-- 벡터(폰트) 기반: 수식, 확대, 축소 능함. -->
+     <!-- <i class="fab fa-apple" id="apple"></i>
+
+     <hr>
+
+     <button><i class="fas fa-trash-alt"></i> Delete</button> -->
+
+     <i class="fab fa-html5 char"></i>
+     <i class="fab fa-css3-alt char"></i>
+     <i class="fab fa-js-square char"></i>
+
+</body>
+</html>

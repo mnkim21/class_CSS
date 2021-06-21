@@ -5,67 +5,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ex51_transition</title>
+    <link rel="stylesheet" href="css/example.css">
+    <style>
+        /* 
+            trasition, 전환
+            - 객체의 속성(상태값)이 변화되는 과정을 시간 순으로 보여주는 기술
+            - 수치형 속성값에 한해서(열거형은 불가능)
+        */
+
+        #box {
+            /* transition-property: width, height, font-size; */
+            transition-property: all;
+            transition-duration: 1s;
+        }
+
+        #box:hover {
+            /* width: 500px; */
+            /* height: 500px; */
+            /* font-size: 5em; */
+            /* opacity: .1; */
+
+            /* font-family: 궁서체; */
+            /* background-color: blue; */
+            /* border-width: 30px; */
+            /* padding: 50px; */
+            /* border-radius:50%; */
+            /* margin-left: 200px; */
+            /* box-shadow: 10px 10px 5px #555; */
+            /* transform: translate(100px, 0px); */
+            /* transform: scale(-1, 1); */
+            transform: rotate(360deg);
+        }
+
+        #cat > img {
+            transition-property: all;
+            transition-duration: .3s;
+            opacity: .3;
+        }
+
+        #cat > img:hover {
+            transform: translate(0px, -25px);
+            opacity: 1;
+        }
+
+        #cat5 + #cat6 {
+            transition: all 1s;
+        }
+
+        #cat5:hover + #cat6 {
+            transform: translate(500px, 0px);
+        }
+        
+        #cage {
+            /* border: 10px soli black; */
+            width: 620px;
+        }
+
+        #cat7 {
+            transition: all 1s;
+        }
+
+        #cage:hover > #cat7 {
+            transform: translate(500px, 0 px);
+        }
+
+    </style>
 </head>
-<link rel="stylesheet" href="css/example.css">
-<style>
-    /* 
-        trasition, 전환
-        - 객체의 속성(상태값)이 변화되는 과정을 시간 순으로 보여주는 기술
-        - 수치형 속성값에 한해서(열거형은 불가능)
-    */
-
-    #box {
-        /* transition-property: width, height, font-size; */
-        transition-property: all;
-        transition-duration: 1s;
-    }
-
-    #box:hover {
-        /* width: 500px; */
-        /* height: 500px; */
-        /* font-size: 5em; */
-        /* opacity: .1; */
-
-        /* font-family: 궁서체; */
-        /* background-color: blue; */
-        /* border-width: 30px; */
-        /* padding: 50px; */
-        /* border-radius:50%; */
-        /* margin-left: 200px; */
-        /* box-shadow: 10px 10px 5px #555; */
-        /* transform: translate(100px, 0px); */
-        /* transform: scale(-1, 1); */
-        transform: rotate(360deg);
-    }
-
-    #cat > img {
-        transition-property: all;
-        transition-duration: .3s;
-        opacity: .3;
-    }
-
-    #cat > img:hover {
-        transform: translate(0px, -25px);
-        opacity: 1;
-    }
-
-    #cat5 + #cat6 {
-        transition: all 1s;
-    }
-
-    #cat5:hover + #cat6 {
-        transform: translate(500px, 0px);
-    }
-    #cage {
-        border: 10px soli black;
-    }
-
-
-    #cage:hover > #cat7 {
-        transform: translate(500px, 0 px);
-    }
-
-</style>
 <body>
     <!-- 
         ex51_transition.html

@@ -5,113 +5,134 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ex38_table</title>
+    <style>
+        #list1, #list2, #list3, #list4, #list5 {
+            width: 800px;;
+            border-bottom: 1px dashed #999;
+            font-variant: small-caps;
+            font-family: verdana;
+            font-size: 32px;
+            color: #444;
+            margin-top: 20px;
+        }
+    
+        #list1 .m {
+            color: cornflowerblue;
+        }
+    
+        #list1 .right{
+            float: right;
+            font-size: 19.2px;
+            margin-top: 14px;
+        }
+    
+        #t1, #t2, #t3, #t4 {
+            width: 800px;
+            border-collapse: collapse;
+            font-family: verdana;
+            font-size: 14px;
+            color: #444;
+            padding: 5px;
+        }
+    
+        #t1 tr, #t2 tr, #t3 tr {
+            border: 1px solid #ccc;
+            text-align: center;
+            height: 28.6px;
+        }
+    
+        #t1 tr .no, #t2 tr .no, #t3 tr .no, #t4 tr .no, #t5 tr .no{
+            width: 57.88px;
+        }
+    
+        #t1 tr .name, #t2 tr .name, #t3 tr .name, #t4 tr .name, #t5 tr .name {
+            width: 88.86px;
+        }
+    
+        #t1 tr .age, #t2 tr .age, #t3 tr .age, #t4 tr .age, #t5 tr .age {
+            width: 58.88px;
+        }
+    
+        #t1 tr .id, #t2 tr .id, #t3 tr .id, #t4 tr .id, #t5 tr .id {
+            width: 109.56px;
+        }
+    
+        #t1 tr .desc, #t2 tr .desc, #t3 tr .desc, #t4 tr .desc, #t5 tr .desc {
+            width: 483.9px;
+        }
+    
+        #t1 tr .left, #t2 tr .left, #t3 tr .left , #t4 tr .left, #t5 tr .left {
+            text-align: left;
+        }
+    
+        #t1 tr th, #t2 tr th, #t3 tr th {
+            background-color: #DDD;
+            border: 1px solid #ccc;
+        }
+    
+        #t1 tr td, #t2 tr td, #t3 tr td {
+            border: 1px solid #ccc;
+        }
+    
+        #list2 .m {
+            color: #FFD700;
+        }
+    
+        #t2 .even {
+            background-color: #EEE;
+        }
+    
+        #list3 .m {
+            color: #C3E871;
+        }
+    
+        #t3 tr:hover{
+            background-color: #eee;
+        }
+    
+        #list4 .m {
+            color: #C792EA;
+        }
+    
+        #t4 tr{
+            border-bottom: 1px solid #ccc;
+            text-align: center;
+            height: 29.6px;
+        }
+    
+        #t4 .header {
+            border-top: 1px solid #ccc;
+            background-color: #DDD;
+        }
+    
+        #list5 .m {
+            color: #73B5AF;
+        }
+    
+        #t5 {
+            width: 800px;
+            border-collapse: separate;
+            font-family: verdana;
+            font-size: 14px;
+            color: #444;
+            padding: 5px;
+        }
+    
+        #t5 td {
+            border: 1px solid #ccc;
+            text-align: center;
+            height: 28.6px;
+        }
+    
+        #t5 th {
+            border: 1px solid #CCC;
+            height: 28.6px;
+            background-color: #DDD;
+        }
+    
+    
+    </style>
 </head>
-
-<style>
-    #list1, #list2, #list3, #list4, #list5 {
-        width: 800px;;
-        border-bottom: 1px dashed #999;
-        font-variant: small-caps;
-        font-family: verdana;
-        font-size: 32px;
-        color: #444;
-        margin-top: 20px;
-    }
-
-    #list1 .m {
-        color: cornflowerblue;
-    }
-
-    #list1 .right{
-        float: right;
-        font-size: 19.2px;
-        margin-top: 14px;
-    }
-
-    #t1, #t2, #t3, #t4, #t5{
-        width: 800px;
-        border-collapse: collapse;
-        font-family: verdana;
-        font-size: 14px;
-        color: #444;
-        padding: 5px;
-    }
-
-    #t1 tr, #t2 tr, #t3 tr, #t5 tr {
-        border: 1px solid #ccc;
-        text-align: center;
-        height: 28.6px;
-    }
-
-    #t1 tr .no, #t2 tr .no, #t3 tr .no, #t4 tr .no {
-        width: 57.88px;
-    }
-
-    #t1 tr .name, #t2 tr .name, #t3 tr .name, #t4 tr .name {
-        width: 88.86px;
-    }
-
-    #t1 tr .age, #t2 tr .age, #t3 tr .age, #t4 tr .age {
-        width: 58.88px;
-    }
-
-    #t1 tr .id, #t2 tr .id, #t3 tr .id, #t4 tr .id {
-        width: 109.56px;
-    }
-
-    #t1 tr .desc, #t2 tr .desc, #t3 tr .desc, #t4 tr .desc {
-        width: 483.9px;
-    }
-
-    #t1 tr .left, #t2 tr .left, #t3 tr .left , #t4 tr .left {
-        text-align: left;
-    }
-
-    #t1 tr th, #t2 tr th, #t3 tr th {
-        background-color: #DDD;
-        border: 1px solid #ccc;
-    }
-
-    #t1 tr td, #t2 tr td, #t3 tr td {
-        border: 1px solid #ccc;
-    }
-
-    #list2 .m {
-        color: #FFD700;
-    }
-
-    #t2 .even {
-        background-color: #EEE;
-    }
-
-    #list3 .m {
-        color: #C3E871;
-    }
-
-    #t3 tr:hover{
-        background-color: #eee;
-    }
-
-    #list4 .m {
-        color: #C792EA;
-    }
-
-    #t4 tr{
-        border-bottom: 1px solid #ccc;
-        text-align: center;
-        height: 28.6px;
-    }
-
-    #t4 .header {
-        border-top: 1px solid #ccc;
-        background-color: #DDD;
-    }
-
-    #list5 .m {
-        color: #73B5AF;
-    }
-</style>
-
 <body>
     <!-- 
         ex38_table.html

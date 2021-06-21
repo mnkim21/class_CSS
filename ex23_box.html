@@ -5,26 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ex23_box</title>
+    <style>
+
+        .box, .link {
+            border : 1px solid black;
+        }
+    
+        #box2 {
+            padding : 50px;
+            margin : 50px;
+        }
+    
+        #link2 {
+            /* padding,margin : 좌우(적용o), 상하(적용x) */
+            padding : 50px;
+            margin : 50px;
+        }
+    </style>
 </head>
-
-<style>
-
-    .box, .link {
-        border : 1px solid black;
-    }
-
-    #box2 {
-        padding : 50px;
-        margin : 50px;
-    }
-
-    #link2 {
-        /* padding,margin : 좌우(적용o), 상하(적용x) */
-        padding : 50px;
-        margin : 50px;
-    }
-</style>
-
 <body>
     <!-- 
         ex23_box.html
@@ -36,6 +34,8 @@
         블럭태그
         -자신의 영역내에 자신의 내용물만 출력 -> 라인 독점
         - 너비(100%), 높이(auto)
+        - 너비와 높이 지정 가능 -> overflow 주의
+        - padding, margin 지정 가능
 
         인라인태그
         - 자신의 내용과 주변의 내용을 같은 라인에 출력 -> 라인공유

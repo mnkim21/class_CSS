@@ -5,69 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ex25_display</title>
+    <style>
+
+        /* 
+            display 속성
+            - 요소를 화면에 출력하는 방식
+            - block : 블럭태그의 기본값
+            - inline : 인라인태그의 기본값
+            - inline-block
+            - none : 아무것도 출력안됨
+         */
+    
+        .box {
+            border : 1px solid black;
+            width: 100px;
+            height: 100px;
+    
+            /* display: block; 기본값 */
+            display: inline;
+        }
+    
+        .link {
+            border : 1px solid black;
+            /* display: inline; 기본값 */
+            display : block;
+            width: 100px;
+            height: 100px;
+        }
+    
+        /* <ul>, <li>블럭태그*/
+        ul, li {
+            /* border : 1px solid black; */
+            border : 0px solid black;
+        }
+    
+        ul {
+            background-color : yellow;
+            padding : 0;
+        }
+    
+        li {
+            background-color: greenyellow;
+            /* margin: 0; */
+            display: inline-block; /* 출력 : inline 성질 + width,height가 적용o */
+            /* width: calc(20% - 2px); */
+            width: 20%;
+            height: 50px;
+            text-align: center;
+        }
+    
+        .cat {
+            display: block;
+            margin-bottom: 10px;
+        }
+    
+        .txt {
+            display:block;
+            margin-bottom: 5px;
+        }
+    
+    </style>
 </head>
-
-<style>
-
-    /* 
-        display 속성
-        - 요소를 화면에 출력하는 방식
-        - block : 블럭태그의 기본값
-        - inline : 인라인태그의 기본값
-        - inline-block
-        - none : 아무것도 출력안됨
-     */
-
-    .box {
-        border : 1px solid black;
-        width: 100px;
-        height: 100px;
-
-        /* display: block; 기본값 */
-        display: inline;
-    }
-
-    .link {
-        border : 1px solid black;
-        /* display: inline; 기본값 */
-        display : block;
-        width: 100px;
-        height: 100px;
-    }
-
-    /* <ul>, <li>블럭태그*/
-    ul, li {
-        /* border : 1px solid black; */
-        border : 0px solid black;
-    }
-
-    ul {
-        background-color : yellow;
-        padding : 0;
-    }
-
-    li {
-        background-color: greenyellow;
-        /* margin: 0; */
-        display: inline-block; /* 출력 : inline 성질 + width,height가 적용o */
-        /* width: calc(20% - 2px); */
-        width: 20%;
-        height: 50px;
-        text-align: center;
-    }
-
-    .cat {
-        display: block;
-        margin-bottom: 10px;
-    }
-
-    .txt {
-        display:block;
-        margin-bottom: 5px;
-    }
-
-</style>
-
 <body>
     <!-- 
         ex25_display.html

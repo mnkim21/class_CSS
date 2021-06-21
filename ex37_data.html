@@ -5,294 +5,291 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ex37_data</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+    
+        body > header {
+            background-color: #0B70B9;
+            color: white;
+        }
+    
+        body > header > section {
+            /* border: 0px solid black; */
+            width: 1200px;
+            margin: 0 auto;
+        }
+    
+        #submenu {
+            text-align: right;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            font-size: 14px;
+        }
+    
+        #submenu > span {
+            margin-left : 30px;
+        }
+    
+        #mainmenu {
+            padding-bottom: 40px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    
+        #mainmenu > span {
+            margin-left: 70px;
+        }
+    
+        body > section > h1 {
+            width: 1200px;
+            margin: 30px auto;
+            color: #333;
+        }
+    
+        body > section > div {
+            width: 960px;
+            margin: 0 auto;
+            text-align: center;
+        }
+    
+        body > section > div > h2 {
+            font-size: 24px;
+            color: #2775c4;
+            margin: 20px auto;
+        }
+    
+         body > section > div > p {
+             font-size: 15px;
+             color: #333;
+             letter-spacing: -1px;
+             margin-bottom: 60px;
+         }
+    
+         #step {
+            margin-bottom: 60px;
+         }
+    
+         #step #one, #step #two {
+             width: 470px;
+             height: 50px;
+             display: inline-block;
+             line-height: 50px;
+             color: white;
+         }
+    
+         #step #one {
+            background-color: #3F7AD2;
+         }
+    
+         #step #two {
+            background-color: #BFC4CA;
+         }
+    
+        table {
+            width: 100%;
+            /* border: 1px solid black; */
+            border-collapse: collapse;
+        }
+        table .header {
+            font-size: 20px;
+            color: #333;
+            font-weight: bold;
+            border-bottom : 2px solid black;
+        }
+    
+        table tr {
+            border-bottom: 1px solid #e0e0e0;
+        }
+    
+        table .header td {
+            padding: 12px 0;
+        }
+    
+        table td {
+            text-align: left;
+            padding: 10px 0 15px 0;
+        }
+    
+        table td.label{
+            width: 220px;
+        }
+    
+        table input {
+            width: 340px;
+            height: 40px;
+            border: 1px solid #ccc;
+        }
+    
+        .btn {
+            width : 100px;
+            height: 40px;
+            color: white;
+            background-color: #3671c8;
+            border: 0px;
+            border-radius: 0;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+    
+        #table2 {
+            margin-top: 50px;
+        }
+    
+        #table2 .header td{
+            text-align: left;
+        }
+    
+        #table2 td {
+            text-align: center;
+        }
+    
+        #tabel2 img, #table2 input {
+            display: block;
+            margin: 0 auto;
+        }
+    
+        #table2 .txt1 {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            margin-top: 40px;
+            margin-bottom: 20px;;
+        }
+    
+        #table2 .txt2, #table2 .txt3 {
+            font-size: 14px;
+            color: #787878;
+            font-weight: bold;
+        }
+    
+        #table2 .txt3{
+            margin-top: 7px;
+            margin-bottom: 40px;
+        }
+    
+        #table2 img {
+            margin-bottom: 37px;
+        }
+    
+        body > footer > header > .txt1 {
+            font-size: 14px;
+            color: #333;
+            font-weight: bold;
+        }
+    
+        body > footer > header > .txt2 {
+            font-size: 16px;
+            color: #2775c4;
+            font-weight: bold;
+            
+        }
+    
+        body > footer > header > .txt3 {
+            font-size: 16px;
+            color: #333;
+            font-weight: bold;
+        }
+    
+        body > footer > header .right {
+            float: right;
+        }
+    
+        body > footer > header .right > span {
+            font-size: 12px;
+            color: #333;
+            border: 1px solid #999;
+            padding: 7px 14px;
+            font-weight: bold;
+            border-radius: 25px;
+        }
+    
+        body > footer > header .right > img {
+            width: 32px;
+            height: 32px;
+        }
+    
+        body > footer > header {
+            width: 1200px;
+            margin: 200px auto 30px auto;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    
+        body > footer > header > img, body > footer > header > span {
+            float: left;
+            margin-left: 8px;
+        }
+    
+        body > footer > header .right > img, body > footer > header .right > span {
+            float: left;
+            margin-left: 8px;
+        }
+    
+        body > footer > section {
+            width: 1200px;
+            margin: 0 auto;
+        }
+    
+        body > footer > section > nav {
+            margin-bottom: 25px;
+        }
+    
+        body > footer > section > nav > span {
+            font-size: 14px;
+            color: #333;
+            margin-right: 10px;
+        }
+    
+        body > footer > section > nav > span.txt1 {
+            color: #2775c4;
+        }
+    
+        body > footer > section > nav .right {
+            float: right;
+        }
+    
+        body > footer > section > nav .right select {
+            width: 200px;
+            height: 36px;
+            float: left
+        }
+    
+        body > footer > section > nav .right input {
+            width: 60px;
+            height: 36px;
+            color: white;
+            background-color: #666;
+            border: 0px;
+            float: left;
+            margin-left: 10px;
+        }
+    
+        body > footer > section > img {
+            float: left;
+            margin-right: 20px;
+        }
+    
+        body > footer > section > div {
+            float: left;
+            font-size: 14px;
+            color: #333;
+        }
+    
+        body > footer > section > div > div {
+            margin-bottom: 7px
+        }
+    
+        body{
+            padding-bottom: 250px;
+        }
+    
+    </style>
 </head>
-
-<style>
-    * {
-        padding: 0;
-        margin: 0;
-    }
-
-    body > header {
-        background-color: #0B70B9;
-        color: white;
-    }
-
-    body > header > section {
-        border: 0px solid black;
-        width: 1200px;
-        margin: 0 auto;
-    }
-
-    #submenu {
-        text-align: right;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        font-size: 14px;
-    }
-
-    #submenu > span {
-        margin-left : 30px;
-    }
-
-    #mainmenu {
-        padding-bottom: 40px;
-        font-size: 18px;
-        font-weight: bold;
-    }
-
-    #mainmenu > span {
-        margin-left: 70px;
-    }
-
-    body > section > h1 {
-        width: 1200px;
-        margin: 30px auto;
-        color: #333;
-    }
-
-    body > section > div {
-        width: 960px;
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    body > section > div > h2 {
-        font-size: 24px;
-        color: #2775c4;
-        margin: 20px auto;
-    }
-
-     body > section > div > p {
-         font-size: 15px;
-         color: #333;
-         letter-spacing: -1px;
-         margin-bottom: 60px;
-     }
-
-     #step {
-        margin-bottom: 60px;
-     }
-
-     #step #one, #step #two {
-         width: 470px;
-         height: 50px;
-         display: inline-block;
-         line-height: 50px;
-         color: white;
-     }
-
-     #step #one {
-        background-color: #3F7AD2;
-     }
-
-     #step #two {
-        background-color: #BFC4CA;
-     }
-
-    table {
-        width: 100%;
-        /* border: 1px solid black; */
-        border-collapse: collapse;
-    }
-    table .header {
-        font-size: 20px;
-        color: #333;
-        font-weight: bold;
-        border-bottom : 2px solid black;
-    }
-
-    table tr {
-        border-bottom: 1px solid #e0e0e0;
-    }
-
-    table .header td {
-        padding: 12px 0;
-    }
-
-    table td {
-        text-align: left;
-
-        padding: 10px 0 15px 0;
-    }
-
-    table td.label{
-        width: 220px;
-    }
-
-    table input {
-        width: 340px;
-        height: 40px;
-        border: 1px solid #ccc;
-    }
-
-    .btn {
-        width : 100px;
-        height: 40px;
-        color: white;
-        background-color: #3671c8;
-        border: 0px;
-        border-radius: 0;
-        font-weight: bold;
-        margin-top: 30px;
-    }
-
-    #table2 {
-        margin-top: 50px;
-    }
-
-    #table2 .header td{
-        text-align: left;
-    }
-
-    #table2 td {
-        text-align: center;
-    }
-
-    #tabel2 img, #table2 input {
-        display: block;
-        margin: 0 auto;
-    }
-
-    #table2 .txt1 {
-        font-size: 20px;
-        font-weight: bold;
-        color: #333;
-        margin-top: 40px;
-        margin-bottom: 20px;;
-    }
-
-    #table2 .txt2, #table2 .txt3 {
-        font-size: 14px;
-        color: #787878;
-        font-weight: bold;
-    }
-
-    #table2 .txt3{
-        margin-top: 7px;
-        margin-bottom: 40px;
-    }
-
-    #table2 img {
-        margin-bottom: 37px;
-    }
-
-    body > footer > header > .txt1 {
-        font-size: 14px;
-        color: #333;
-        font-weight: bold;
-    }
-
-    body > footer > header > .txt2 {
-        font-size: 16px;
-        color: #2775c4;
-        font-weight: bold;
-        
-    }
-
-    body > footer > header > .txt3 {
-        font-size: 16px;
-        color: #333;
-        font-weight: bold;
-    }
-
-    body > footer > header .right {
-        float: right;
-    }
-
-    body > footer > header .right > span {
-        font-size: 12px;
-        color: #333;
-        border: 1px solid #999;
-        padding: 7px 14px;
-        font-weight: bold;
-        border-radius: 25px;
-    }
-
-    body > footer > header .right > img {
-        width: 32px;
-        height: 32px;
-    }
-
-    body > footer > header {
-        width: 1200px;
-        margin: 200px auto 30px auto;
-        border-top: 1px solid #ccc;
-        border-bottom: 1px solid #ccc;
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-
-    body > footer > header > img, body > footer > header > span {
-        float: left;
-        margin-left: 8px;
-    }
-
-    body > footer > header .right > img, body > footer > header .right > span {
-        float: left;
-        margin-left: 8px;
-    }
-
-    body > footer > section {
-        width: 1200px;
-        margin: 0 auto;
-    }
-
-    body > footer > section > nav {
-        margin-bottom: 25px;
-    }
-
-    body > footer > section > nav > span {
-        font-size: 14px;
-        color: #333;
-        margin-right: 10px;
-    }
-
-    body > footer > section > nav > span.txt1 {
-        color: #2775c4;
-    }
-
-    body > footer > section > nav .right {
-        float: right;
-    }
-
-    body > footer > section > nav .right select {
-        width: 200px;
-        height: 36px;
-        float: left
-    }
-
-    body > footer > section > nav .right input {
-        width: 60px;
-        height: 36px;
-        color: white;
-        background-color: #666;
-        border: 0px;
-        float: left;
-        margin-left: 10px;
-    }
-
-    body > footer > section > img {
-        float: left;
-        margin-right: 20px;
-    }
-
-    body > footer > section > div {
-        float: left;
-        font-size: 14px;
-        color: #333;
-    }
-
-    body > footer > section > div > div {
-        margin-bottom: 7px
-    }
-
-    body{
-        padding-bottom: 250px;
-    }
-
-</style>
-
 <body>
     <!-- 
         ex37_data.html

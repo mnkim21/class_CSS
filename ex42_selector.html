@@ -5,66 +5,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ex42_selector</title>
+    <link rel="stylesheet" href="css/tistory.css">
+    <link rel="stylesheet" href="css/example.css">
+    <style>
+        /* 
+            전후 선택자
+            (:는 하나를 써도 된다.)
+            1. ::before
+            2. ::after
+
+            전후 선택자에서 사용하는 content 속성의 속성값
+            1. none
+            2. 문자열
+            3. open-quote
+            4. close-quote
+
+        */
+
+        p > span {
+            color: tomato;
+        }
+
+        /* p > span::before {
+            content: '#####';
+            color: blue;
+            text-decoration: underline;
+        } */
+
+        /* p > span::after {
+            content: '#####';
+            color: blue;
+            text-decoration: underline;
+        } */
+
+        p > span::before {
+            /* content: '['; */
+            content: open-quote;
+        }
+
+        p > span::after {
+            /* content: ']'; */
+            content: close-quote;
+        }
+
+        #list .item {
+            float: left;
+        }
+
+        #list::after{
+            content: '홍길동';
+        }
+
+        /* <div style="clear: both;"></div> */
+        #list::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+    </style>
 </head>
-<link rel="stylesheet" href="css/tistory.css">
-<link rel="stylesheet" href="css/example.css">
-<style>
-    /* 
-        전후 선택자
-        (:는 하나를 써도 된다.)
-        1. ::before
-        2. ::after
-
-        전후 선택자에서 사용하는 content 속성의 속성값
-        1. none
-        2. 문자열
-        3. open-quote
-        4. close-quote
-
-    */
-
-    p > span {
-        color: tomato;
-    }
-
-    /* p > span::before {
-        content: '#####';
-        color: blue;
-        text-decoration: underline;
-    } */
-
-    /* p > span::after {
-        content: '#####';
-        color: blue;
-        text-decoration: underline;
-    } */
-
-    p > span::before {
-        /* content: '['; */
-        content: open-quote;
-    }
-
-    p > span::after {
-        /* content: ']'; */
-        content: close-quote;
-    }
-
-    #list .item {
-        float: left;
-    }
-
-    #list::after{
-        content: '홍길동';
-    }
-
-    /* <div style="clear: both;"></div> */
-    #list::after {
-        content: '';
-        display: block;
-        clear: both;
-    }
-</style>
-
 <body>
     <!-- 
         ex42_selector.html

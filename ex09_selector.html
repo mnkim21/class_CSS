@@ -5,10 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ex09_selector</title>
-
     <style>
         /* 
-
             동일한 선택자 사용
             - 허용(o), 관리 -> 되도록 지양할 것
 
@@ -49,7 +47,7 @@
         /* 10점 -> 11점 -> 21점  ->22점*/
         body>div.box.aaa{color:red;}
         /* 10점 -> 11점 -> 21점 -> 22점*/
-        body>div.aaa,box{color:blue;}
+        body>div.aaa.box{color:blue;}
 
         /* 100점 */
         #box1 { color: red; }
@@ -58,7 +56,6 @@
         .box.aaa.bbb.ccc.ddd.eee.fff.ggg.hhh.iii.jjj { color: blue; }
 
     </style>
-
 </head>
 <body>
     <!-- 

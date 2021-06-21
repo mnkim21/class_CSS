@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex63_animation</title>
+    <link rel="stylesheet" href="css/example.css">
+    <style>
+        /* 
+            transition -> animation
+            transition: 1 -> 10
+            animation: 1 -> (값의 변화를 개발자가 직접 조작) ->10
+        */
+
+        /* 
+            블럭태그의 height속성
+            - 수치 지정(%빼고): 적용o
+            - %: 적용x
+                - 부모 영역을 100%로 하는 상대 단위
+
+
+            <html>, <body>
+            - height: auto (= 내용물의 높이가 자신의 높이)
+
+            <html>
+            - height: 100% = 눈에 보이는 문서 전체가 높이가 됨
+
+            <body>
+            - height: 100% = 부모인 <html>의 100%가 높이가 됨
+
+
+            즉, <body>태그를 문서(브라우저) 전체 높이로 설정하기
+            방법1.
+                1. <html> height: 100%
+                2. <body> height: 100%
+            방법2. CSS3
+                1. <xxx>의 높이 : 100vh
+                    - vh: viewport height, 눈에 보이는 창 크기만의 높이로 지정해라
+
+
+            */
+
+        html {
+            /* border: 50px solid gold; */
+            /* height: 100%; */
+            /* 
+                border만큼 스크롤이 생김 -> 없애기 위해선 box-sizing을 이용할 것 
+            */
+            /* box-sizing: border-box; */
+        }
+
+        body {
+            /* border: 10px solid black; */
+            margin: 0px;
+            /* 
+                화면 전체를 바디로 만들고 싶다
+                height: 100%는 적용 안됨
+                -> 부모 영역<html>의 height의 기본 설정은 auto = 내용물의 높이가 자신의 높이
+                => 따라서, html의 height를 100%로 변경후 <body>의 height를 100%로 설정해야됨.
+            */
+            
+            /* height: 100%; */
+            /* box-sizing: border-box; */
+
+            height: 100vh;
+        }
+
+        .box {
+            margin-bottom: 10px;
+        }
+
+        body:hover #box1 {
+            animation-name: key1; /* 외부참조 */
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+        }
+
+        body:hover #box3 {
+            animation-name: key1; /* 외부참조 */
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes key1 {
+            /* 어떤 속성 + 어떤 변화값 + 시간 순서 */
+            from {
+                width: 200px;
+            }
+
+            to {
+                width: 600px;
+            }
+        }
+
+        body:hover #box2 {
+            transition: all 1s;
+            width: 600px;
+        }
+
+        body:hover #box4 {
+            animation-name: key2;
+            animation-duration: 1s;
+        }
+
+        @keyframes key2 {
+            /* from {
+                width: 200px;
+                height: 200px;
+            }
+            to {
+                width: 400px;
+                height: 400px;
+            } */
+
+            /* 시간대별 속성값의 변화를 세분화 */
+            0% {
+                /* 0초 */
+                width: 200px;
+                background-color: orange;
+            }
+            50% {
+                /* 0.5초 */
+                width: 600px;
+                background-color: springgreen;
+            }
+            100% {
+                /* 1초 */
+                width: 200px;
+                background-color: blue;
+            }
+        }
+
+        body:hover #box5 {
+            animation-name: key3;
+            animation-duration: 5s;
+        }
+
+        @keyframes key3 {
+            0%{width: 200px;}
+            25%{width: 1000px;}
+            50%{width: 500px;}
+            75%{width: 800px;}
+            100%{width: 200px;}
+        }
+        
+        #cat1 {
+            position: relative;
+            left: 0px;
+            top: 0px;
+            /* transition: all 1s; */
+        }
+
+        body:hover #cat1 {
+            /* left: 300px;
+            top: 100px; */
+            animation-name: key4;
+            animation-duration: 1s;;
+        }
+
+        @keyframes key4 {
+            0% {
+                left: 0;
+                top: 0;
+            }
+            25% {
+                left: 500px;
+                top: 200px;
+            }
+            50% {
+                left: 300px;
+                top: 400px;
+            }
+            75% {
+                left: 600px;
+                top: 600px;
+            }
+            100% {
+                left: 0;
+                top: 0;
+            }
+        }
+
+        #box6 {
+            margin: 100px;
+        }
+
+        body:hover #box6 {
+            animation-name: key5; /* 값 변화 */
+            animation-duration: 1s; /* 적용 시간 */
+            animation-iteration-count: 3; /* 반복횟수(1초 씩 3회 반복) */
+            animation-direction: normal; /* 값의 변화 방향(normal: 정방향, reverse: 역방향, alternate: 정방향-역방향, alternate-reverse: 역방향-정방향)*/
+            animation-delay: 5s; /* 지연시간 */
+        }
+
+        @keyframes key5 {
+            0% {
+                tansform: translate(0,0);
+            }
+            25% {
+                transform: translate(200px, 0);
+            }
+            50% {
+                transform: translate(200px, 200px);
+            }
+            75% {
+                transform: translate(0, 200px);
+            }
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+        #cat img {
+            display: block;
+            margin: 10px;
+        }
+
+        #cat:hover img {
+            animation-name: key6;
+            animation-duration: 3s;
+            animation-iteration-count: 3;
+            animation-direction: alternate;
+        }
+
+        #cat img:nth-child(1) {animation-delay: 0s; animation-duration: 1s;}
+        #cat img:nth-child(2) {animation-delay: 3s; animation-duration: 3s;}
+        #cat img:nth-child(3) {animation-delay: 0.5s; animation-duration: 5s;}
+        #cat img:nth-child(4) {animation-delay: 1s; animation-duration: .5s;}
+        #cat img:nth-child(5) {animation-delay: 2s; animation-duration: 1.5s;}
+
+        @keyframes key6 {
+            from {transform: translate(0, 0);}
+            to {transform: translate(800px, 0);}
+        }
+
+        #box7 {
+            width: 500px;
+            height: 500px;
+            border: 10px solid black;
+            margin: 50px;
+            background-color: red;
+            /* animation-name: key7;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-direction: reverse; */
+        }
+
+        #box8 {
+            width: 50px;
+            height: 250px;
+            border: 10px solid black;
+            background-color: yellow;
+            margin: 0 auto;
+            animation-name: key7;
+            animation-duration: 60s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            transform-origin: center 250px;
+        }
+
+        @keyframes key7 {
+            from {transform: rotate(0);}
+            to {transform: rotate(360deg);}
+        }
+        
+    </style>
+</head>
+
+<body>
+    <!-- 
+        ex63_animation.html
+     -->
+
+     <h1>애니메이션</h1>
+
+     <div id="box7" class="box">
+        <div id="box8" class="box"></div>
+     </div>
+
+     <hr>
+     
+     
+     <div id="box6" class="box box-medium box-border3 bgcolor-blue">box6</div>
+
+     <hr>
+     <div id="cat">
+        <img src="images/catty01.png" id="cat1">
+        <img src="images/catty02.png" id="cat2">
+        <img src="images/catty03.png" id="cat3">
+        <img src="images/catty04.png" id="cat4">
+        <img src="images/catty05.png" id="cat5">
+     </div>
+
+     <div id="box1" class="box box-medium box-border3 bgcolor-red">box1</div>
+     <div id="box2" class="box box-medium box-border3 bgcolor-yellow">box2</div>
+     <div id="box3" class="box box-medium box-border3 bgcolor-blue">box3</div>
+     <div id="box4" class="box box-medium box-border3 bgcolor-green">box4</div>
+     <div id="box5" class="box box-medium box-border3 bgcolor-orange">box5</div>
+     
+</body>
+</html>
